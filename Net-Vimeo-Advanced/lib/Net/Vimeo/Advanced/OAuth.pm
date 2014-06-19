@@ -220,29 +220,29 @@ authentication for Vimeo Advanced API.
 
 =head1 SYNOPSIS
 
-    # First you need to authorize your application:
-
+    # First you need to authorize user to access data:
     my $vimeo = Net::Vimeo->new(
         consumer_key    => 'your_app_key',
         consumer_secret => 'your_app_secret_key',
     );
 
-    my $auth_url =  $vimeo_oauth->get_authorization_url();
-
     # To get access tokens you need the oauth_verifier,
     # request_token and request_token secret. The last two 
-    # were obtain when you got the authorization url.
+    # were obtain when you got the authorization url. Vimeo
+    # redirects user to application, passing the oauth_verifier
 
     # The oauth_verifier will be obtain after you give access 
     # to your application. 
-    my $verifier = ' oauth_verifier_code';
+
+    my $auth_url =  $vimeo_oauth->get_authorization_url();
+    my $verifier = 'oauth_verifier_code';
 
     $vimeo_oauth->get_access_token( { verifier => $verifier } );
 
     # Now you have your access tokens and do not need to go through
     # this process every time you make an api request
-    print "Access token: " . $self->access_token;
-    print "Accesss token secret: " . $self->access_token_secret;
+    print "Access token: " . $self->access_token . "\n";
+    print "Accesss token secret: " . $self->access_token_secret . "\n";
 
 =head1 DESCRIPTION
 

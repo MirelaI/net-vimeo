@@ -178,7 +178,7 @@ After you have your access tokens via OAuth you can start
 making requests to Vimeo Advanced API. Arguments necessary to make the call
 to Vimeo Advanced API are: C<$method> which is a string representing the HTTP
 method needed for your request. The second one is the api request params, you can 
-find the needed params on Vimeo Advanced api documentation.
+find the needed params on Vimeo Advanced API documentation.
 
     $vimeo->make_api_request( 'GET', $request_params);
 
