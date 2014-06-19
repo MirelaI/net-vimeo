@@ -1,14 +1,13 @@
 use strict;
 use warnings;
 
-use Net::Vimeo;
+use Net::Vimeo::Advanced;
 use LWP::UserAgent;
 use HTTP::Request::Common;
-use Data::Dumper;
 use JSON;
 
 
-my $vimeo_oauth = Net::Vimeo->new(
+my $vimeo_oauth = Net::Vimeo::Advanced->new(
     consumer_key          => $ENV{VIMEO_CONSUMER_KEY},
     consumer_secret       => $ENV{VIMEO_CONSUMER_SECRET},
 );
@@ -39,8 +38,8 @@ my $upload_params = {
 my $resp_content = $vimeo_oauth->make_api_request( 'GET', $upload_params);
 my $ticket_response = decode_json($resp_content->content);
 
-printf( 'EndPoint: %s \n', $ticket_response->{ticket}->{endpoint} );
-printf( 'Ticket id: %s \n', $ticket_response->{ticket}->{id} );
+printf( "EndPoint: %s \n", $ticket_response->{ticket}->{endpoint} );
+printf( "Ticket id: %s \n", $ticket_response->{ticket}->{id} );
 
 # Upload: 
 my $ua = LWP::UserAgent->new();

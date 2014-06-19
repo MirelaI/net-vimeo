@@ -2,11 +2,10 @@ package Net::Vimeo::Advanced;
 
 use Carp;
 use Clone qw( clone );
-use HTTP::Request::Common;
+use HTTP::Request;
 use JSON qw( decode_json );
 use Moose;
 use Net::OAuth;
-use Types::Standard qw( InstanceOf );
 
 use namespace::autoclean;
 
