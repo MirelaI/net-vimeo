@@ -64,12 +64,9 @@ for my $attribute ( qw/access_token access_token_secret request_token request_to
 }
 
 sub _build_user_agent {
-    my $self = shift;
-
-    eval "use LWP::UserAgent";
-    croak $@ if $@;
-
+    my $self       = shift;
     my $user_agent = LWP::UserAgent->new();
+
     $user_agent->env_proxy;
 
     return $user_agent;
@@ -283,4 +280,3 @@ Mirela Iclodean, C<< <imirela at cpan.org> >>
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
-=cut
