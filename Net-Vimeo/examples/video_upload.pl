@@ -1,13 +1,13 @@
 use strict;
 use warnings;
 
-use Net::Vimeo::Advanced;
+use Net::Vimeo;
 use LWP::UserAgent;
 use HTTP::Request::Common;
 use JSON;
 
 
-my $vimeo_oauth = Net::Vimeo::Advanced->new(
+my $vimeo_oauth = Net::Vimeo->new(
     consumer_key          => $ENV{VIMEO_CONSUMER_KEY},
     consumer_secret       => $ENV{VIMEO_CONSUMER_SECRET},
 );

@@ -11,13 +11,13 @@ else {
     plan(skip_all => "To run the test, VIMEO_CONSUMER_KEY and VIMEO_CONSUMER_SECRET enviroment variables must be set!");
 }
 
-use_ok('Net::Vimeo::Advanced');
-use_ok('Net::Vimeo::Advanced::OAuth');
+use_ok('Net::Vimeo');
+use_ok('Net::Vimeo::OAuth');
 
 
-can_ok( 'Net::Vimeo::Advanced', 'new');
+can_ok( 'Net::Vimeo', 'new');
 
-my $vimeo = Net::Vimeo::Advanced->new( consumer_key => $ENV{VIMEO_CONSUMER_KEY}, consumer_secret => $ENV{VIMEO_CONSUMER_SECRET} );
+my $vimeo = Net::Vimeo->new( consumer_key => $ENV{VIMEO_CONSUMER_KEY}, consumer_secret => $ENV{VIMEO_CONSUMER_SECRET} );
 
 ok($vimeo, 'Vimeo object created with provided credentials');
 

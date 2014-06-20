@@ -1,4 +1,4 @@
-package Net::Vimeo::Advanced;
+package Net::Vimeo;
 
 use Carp;
 use Clone qw( clone );
@@ -9,7 +9,7 @@ use Net::OAuth;
 
 use namespace::autoclean;
 
-with 'Net::Vimeo::Advanced::OAuth';
+with 'Net::Vimeo::OAuth';
 
 our $VERSION = '0.000001';
 
@@ -139,7 +139,7 @@ __PACKAGE__->meta->make_immutable;
 
 =head1 NAME
 
-Net::Vimeo::Advanced - Make requests via OAuth to Vimeo Advanced API
+Net::Vimeo - Make requests via OAuth to Vimeo Advanced API
 
 =head1 VERSION
 
@@ -147,9 +147,9 @@ Version 0.000001
 
 =head1 SYNOPSIS
 
-    use Net::Vimeo::Advanced;
+    use Net::Vimeo;
 
-    my $vimeo = Net::Vimeo::Advanced->new( consumer_key => 'xxxx', consumer_secret => 'yyyy' );
+    my $vimeo = Net::Vimeo->new( consumer_key => 'xxxx', consumer_secret => 'yyyy' );
     
     # First you need to get the authorization URL
     # If you need permission to upload a video, send the 
@@ -194,7 +194,7 @@ Mirela Iclodean, C<< <imirela at cpan.org> >>
 
 =head1 SEE ALSO
 
-L<Net::Vimeo::Advanced::OAuth>
+L<Net::Vimeo::OAuth>
 
 =head1 BUGS
 
@@ -206,7 +206,7 @@ automatically be notified of progress on your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Net::Vimeo::Advanced
+    perldoc Net::Vimeo
 
 
 You can also look for information at:

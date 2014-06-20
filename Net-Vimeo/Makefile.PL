@@ -4,10 +4,10 @@ use warnings FATAL => 'all';
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME             => 'Net::Vimeo::Advanced',
+    NAME             => 'Net::Vimeo',
     AUTHOR           => q{Mirela Iclodean <imirela@cpan.org>},
-    VERSION_FROM     => 'lib/Net/Vimeo/Advanced.pm',
-    ABSTRACT_FROM    => 'lib/Net/Vimeo/Advanced.pm',
+    VERSION_FROM     => 'lib/Net/Vimeo.pm',
+    ABSTRACT_FROM    => 'lib/Net/Vimeo.pm',
     LICENSE          => 'Artistic_2_0',
     PL_FILES         => {},
     MIN_PERL_VERSION => 5.006,
@@ -35,5 +35,5 @@ WriteMakefile(
         'URI::Escape'           => 3.31,
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean => { FILES => 'Net-Vimeo-Advanced-*' },
+    clean => { FILES => 'Net-Vimeo-*' },
 );

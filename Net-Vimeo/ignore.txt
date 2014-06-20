@@ -14,5 +14,5 @@ inc/
 nytprof.out
 pod2htm*.tmp
 pm_to_blib
-Net-Vimeo-Advanced-*
-Net-Vimeo-Advanced-*.tar.gz
+Net-Vimeo-*
+Net-Vimeo-*.tar.gz
