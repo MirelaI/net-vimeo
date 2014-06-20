@@ -133,6 +133,10 @@ sub return_content {
     return decode_json( $req->content );
 }
 
+__PACKAGE__->meta->make_immutable;
+
+1;
+
 =head1 NAME
 
 Net::Vimeo::Advanced - Make requests via OAuth to Vimeo Advanced API
@@ -235,6 +239,3 @@ Copyright 2014 Mirela Iclodean.
 This program is free software; you can redistribute it and/or modify it
 under the terms of the the Artistic License (2.0). 
 
-=cut
-
-1; # End of Net::Vimeo::Advanced
