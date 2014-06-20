@@ -1,4 +1,4 @@
-package Net::Vimeo::Advanced::OAuth;
+package Net::Vimeo::OAuth;
 
 use Carp;
 use Digest::SHA;
@@ -208,11 +208,11 @@ __END__
 
 =head1 NAME
 
-Net::Vimeo::Advanced::OAuth - OAuth for Vimeo Advanced API
+Net::Vimeo::OAuth - OAuth for Vimeo Advanced API
 
 =head1 DESCRIPTION
 
-Net::Vimeo::Advanced::OAuth is a role that provides OAuth
+Net::Vimeo::OAuth is a role that provides OAuth
 authentication for Vimeo Advanced API.
 
 =head1 SYNOPSIS
@@ -243,7 +243,7 @@ authentication for Vimeo Advanced API.
 
 =head1 DESCRIPTION
 
-Net::Vimeo::Advanced::OAuth is a perl interface to Vimeo Advanced API
+Net::Vimeo::OAuth is a perl interface to Vimeo Advanced API
     
 =head1 METHODS
 
@@ -269,7 +269,7 @@ from C<get_authorization_url> you can exchange it with access tokens.
 
 =head1 SEE ALSO
 
-L<Net::Vimeo::Advanced>
+L<Net::Vimeo>
 
 =head1 AUTHOR
 
