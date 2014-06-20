@@ -1,5 +1,8 @@
 Revision history for Net-Vimeo
 
+0.000002    Thu Jun 20 18:30 2014
+            Added files to MANIFEST
+
 0.000001    Thu Jun 19 12:10 2014
             First version of Vimeo Advanced API Perl interface
 

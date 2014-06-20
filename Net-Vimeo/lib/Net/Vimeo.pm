@@ -11,7 +11,7 @@ use namespace::autoclean;
 
 with 'Net::Vimeo::OAuth';
 
-our $VERSION = '0.000001';
+our $VERSION = '0.000002';
 
 around BUILDARGS => sub {
     my $orig  = shift;
@@ -143,7 +143,7 @@ Net::Vimeo - Make requests via OAuth to Vimeo Advanced API
 
 =head1 VERSION
 
-Version 0.000001
+Version 0.000002
 
 =head1 SYNOPSIS
 
