@@ -29,6 +29,7 @@ WriteMakefile(
         'LWP::UserAgent'        => 0.32,
         'Moose'                 => 0,
         'Moose::Role'           => 0,
+        'namespace::autoclean'  => 0
         'Net::OAuth'            => 0.28,
         'Types::Standard'       => 0.044,
         'URI'                   => 1.60,
