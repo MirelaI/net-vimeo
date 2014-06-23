@@ -11,7 +11,7 @@ use namespace::autoclean;
 
 with 'Net::Vimeo::OAuth';
 
-our $VERSION = '0.000002';
+our $VERSION = '0.000003';
 
 around BUILDARGS => sub {
     my $orig  = shift;
@@ -44,7 +44,7 @@ sub make_api_request {
     carp "API method must be present in arguments( eq: method => 'vimeo.activity.userDid')" && return 
         unless ( $params->{method} );
 
-    my $api_req = $self->_api_request($method // 'GET', $params, 'protected resource');
+    my $api_req = $self->_api_request($method || 'GET', $params, 'protected resource');
     my $res = $self->user_agent->send_request($api_req);
 
     return $res;
@@ -143,7 +143,7 @@ Net::Vimeo - Make requests via OAuth to Vimeo Advanced API
 
 =head1 VERSION
 
-Version 0.000002
+Version 0.000003
 
 =head1 SYNOPSIS
 
