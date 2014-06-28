@@ -187,7 +187,7 @@ L<Net::Vimeo::OAuth> for further insight into the overall process of authenticat
     );
 
 On construction, consumer_key and consumer_secret are mandatory. In case you want your
-app to be "statically" procided with an access_token, you may provide one on construction,
+app to be "statically" provided with an access_token, you may set one on construction,
 but you'll commonly use the methods around get_access_token() to ask a user for access
 so your app can act on behalf of granting users. See L<Net::Vimeo::OAuth> for the underlying
 mechanism.
