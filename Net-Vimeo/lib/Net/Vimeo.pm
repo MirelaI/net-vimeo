@@ -153,11 +153,11 @@ Version 0.000003
     
     # First you need to get the authorization URL
     # If you need permission to upload a video, send the 
-    # permission paramether, otherwise you will only have read permission
+    # permission parameter, otherwise you will only have read permission
     my $vimeo_oauth_url = $vimeo_oauth->get_authorization_url( permission => 'write' );
 
     # Get the oauth_verifier from that url and
-    # exchange the request tokens with acces tokens
+    # exchange the request tokens with access tokens
     $vimeo->get_access_token( { verifier => 'oauth_verifier' } );
 
     # Now you are authorized....you can start playing
@@ -186,11 +186,11 @@ L<Net::Vimeo::OAuth> for further insight into the overall process of authenticat
         access_token_secret => 'zzzz_secret' # optional
     );
 
-On construction, consumer_key and consumer_secret are mandatory. In case you want your
-app to be "statically" provided with an access_token, you may set one on construction,
-but you'll commonly use the methods around get_access_token() to ask a user for access
-so your app can act on behalf of granting users. See L<Net::Vimeo::OAuth> for the underlying
-mechanism.
+On construction, consumer_key and consumer_secret are mandatory to identify your app 
+against Vimeo. In case you want your app to be "statically" provided with an access_token,
+you may set one on construction, but you'll commonly use the methods around get_access_token()
+to ask a user for access so your app can act on behalf of granting users. See L<Net::Vimeo::OAuth>
+for the underlying mechanism.
 
 =head1 METHODS
 
