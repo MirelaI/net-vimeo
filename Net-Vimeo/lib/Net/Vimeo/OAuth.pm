@@ -262,8 +262,23 @@ Get request tokens that later can be exchanged with access tokens.
 =item get_access_token
 
 In order to use Vimeo Advanced API you will need access tokens. This is 
-the final step in authorize you app. Given the request tokens and the oauth verifier
+the final step in authorizing you app. Given the request tokens and the oauth verifier
 from C<get_authorization_url> you can exchange it with access tokens.
+
+An access_token is the key you get from a user which allows your app to
+act on behalf of a user. Usually your application will collect an acceess_token
+by sending the user to a callback, an URL where the user can decide if she
+grants access or not. Vimeo provides a readily available access_token
+for your own account on your private developer page where you register your
+app.
+
+=item access_token
+
+Set the acceee_token with this method. (provided via L<Net::OAuth>)
+
+=item access_token_secret
+
+Set the acceee_token_secret with this method. (provided via L<Net::OAuth>)
 
 =back
 
