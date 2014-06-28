@@ -171,10 +171,37 @@ Version 0.000003
 
     my $result = $vimeo->make_api_request( 'GET', $request_params);
 
+The canonical documentation for the Advanced API is at L<http://developer.vimeo.com/apis/advanced>
+with the method listing residing at http://developer.vimeo.com/apis/advanced/methods
+
+The distribution has a simple example bundled, and make sure to study the tests and
+L<Net::Vimeo::OAuth> for further insight into the overall process of authentication.
+
+=head1 CONSTRUCTOR
+
+    my $vimeo = Net::Vimeo->new(
+        consumer_key    => 'xxxx',
+        consumer_secret => 'yyyy',
+        access_token    => 'zzzz',  # optional
+        access_token_secret => 'zzzz_secret' # optional
+    );
+
+On construction, consumer_key and consumer_secret are mandatory. In case you want your
+app to be "statically" procided with an access_token, you may provide one on construction,
+but you'll commonly use the methods around get_access_token() to ask a user for access
+so your app can act on behalf of granting users. See L<Net::Vimeo::OAuth> for the underlying
+mechanism.
 
 =head1 METHODS
 
 =over 4
+
+=item get_authorization_url( permission => $scope );
+
+Returns a Vimeo URL (L<URI>-Object) which you will use to send a user to a
+page (on Vimeo) where she may accept or decline that your app receives
+access to her account. Acceptance means the user issues an access_token
+for your app, an alphanumeric string.
 
 =item make_api_request($method, $request_params)
 
