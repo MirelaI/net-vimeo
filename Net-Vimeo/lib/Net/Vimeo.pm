@@ -172,7 +172,7 @@ Version 0.000003
     my $result = $vimeo->make_api_request( 'GET', $request_params);
 
 The canonical documentation for the Advanced API is at L<http://developer.vimeo.com/apis/advanced>
-with the method listing residing at http://developer.vimeo.com/apis/advanced/methods
+with the method listing residing at L<http://developer.vimeo.com/apis/advanced/methods>
 
 The distribution has a simple example bundled, and make sure to study the tests and
 L<Net::Vimeo::OAuth> for further insight into the overall process of authentication.
